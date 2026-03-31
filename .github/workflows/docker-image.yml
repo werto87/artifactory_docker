@@ -1,4 +1,4 @@
-name: archlinux-base
+name: artifactory
 
 on:
   workflow_dispatch:
