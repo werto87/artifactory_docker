@@ -13,8 +13,7 @@ RUN wget https://releases.jfrog.io/artifactory/artifactory-debs/pool/jfrog-artif
 
 # Install Artifactory
 RUN apt-get update && \
-    apt-get install -y ./jfrog-artifactory-oss-7.77.17.deb || true && \
-    apt-get -f install -y && \
+    apt-get install -y ./jfrog-artifactory-oss-7.77.17.deb \
     rm -f jfrog-artifactory-oss-7.77.17.deb
 
 # Expose default Artifactory ports
