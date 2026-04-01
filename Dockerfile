@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependencies
 RUN apt-get update && \
-    apt-get install -y wget gnupg curl lsb-release sudo procps && \
+    apt-get install -y wget && \
     apt-get clean
 
 # Download Artifactory OSS .deb
@@ -13,7 +13,7 @@ RUN wget https://releases.jfrog.io/artifactory/artifactory-debs/pool/jfrog-artif
 
 # Install Artifactory
 RUN apt-get update && \
-    apt-get install -y ./jfrog-artifactory-oss-7.77.17.deb \
+    apt-get install -y ./jfrog-artifactory-oss-7.77.17.deb  && \
     rm -f jfrog-artifactory-oss-7.77.17.deb
 
 # Expose default Artifactory ports
