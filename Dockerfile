@@ -9,12 +9,12 @@ RUN apt-get update && \
     apt-get clean
 
 # Download Artifactory OSS .deb
-RUN wget https://releases.jfrog.io/artifactory/artifactory-debs/pool/jfrog-artifactory-oss/jfrog-artifactory-oss-7.77.17.deb
+RUN wget https://releases.jfrog.io/artifactory/artifactory-debs/pool/jfrog-artifactory-cpp-ce/jfrog-artifactory-cpp-ce-7.63.12.deb
 
 # Install Artifactory
 RUN apt-get update && \
-    apt-get install -y ./jfrog-artifactory-oss-7.77.17.deb  && \
-    rm -f jfrog-artifactory-oss-7.77.17.deb
+    apt-get install -y ./jfrog-artifactory-cpp-ce-7.63.12.deb  && \
+    rm -f ./jfrog-artifactory-cpp-ce-7.63.12.deb
 
 # Expose default Artifactory ports
 EXPOSE 8081 8082
